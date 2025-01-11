@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -14,11 +13,11 @@ app.use(bodyParser.json());
 
 // OpenAI API Configuration
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: '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', // Replace with your OpenAI API key
 });
 
 // Google Maps API Key
-const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
+const googleMapsApiKey = 'AIzaSyCnx7y5I2pB0Q-GUs8-MLuNzvz93zOvkOs'; // Replace with your Google Maps API key
 
 // Generate Travel Itinerary Endpoint
 app.post('/api/plan', async (req, res) => {
